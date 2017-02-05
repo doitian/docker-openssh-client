@@ -1,5 +1,4 @@
-FROM ubuntu:trusty
+FROM alpine:latest
 
-RUN apt-get update && apt-get install -y openssh-client rsync sshpass \
- && rm -rf /var/lib/apt/lists/* \
+RUN apk add -U openssh-client rsync sshpass
  && mkdir -p /root/.ssh
